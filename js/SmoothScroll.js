@@ -1724,8 +1724,9 @@ class SmoothScroll {
 }
 
 // Export as global or module
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = SmoothScroll;
-} else {
-    window.SmoothScroll = SmoothScroll;
-}
+// if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+//     module.exports = SmoothScroll;
+// } else {
+//     window.SmoothScroll = SmoothScroll;
+// }
+export default SmoothScroll;

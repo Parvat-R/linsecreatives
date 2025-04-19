@@ -75,13 +75,15 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    /* background-color: var(--white); */
+    background-color: #fafafade;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
     border-bottom: 1px solid #1a1a1a38;
     z-index: 10;
+    mix-blend-mode: difference;
+    color: #0e0e0eb0;
 }
 
 #nav .nav-container {
@@ -146,6 +148,7 @@ a:hover {
     padding: .2rem 1rem;
     border-radius: .7rem;
     text-decoration: none;
+    color: #050505c7;
 }
 
 #hero {
@@ -153,7 +156,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     background-color: #fafafa;
     color: var(--black);
     text-align: center;
@@ -162,33 +165,45 @@ a:hover {
     overflow: hidden;
 }
 
-#hero p {
+#hero h1 {
     font-size: 100px;
     font-family: 'Clash Display';
     text-transform: capitalize;
     font-weight: 600;
     color: #1a1a1ad9;
+    max-width: 1000px;
 }
 
-.mover {
-    border: 1px solid #000;
-    border-radius: .7rem;
-    position: absolute;
-    z-index: 11;
-    user-select: none;
-    pointer-events: none;
+.pages {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: .3s;
 }
 
-.dot {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #1a1a1a;
-    mix-blend-mode: difference;
-    /* opacity: .5; */
-    backdrop-filter: invert(1);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 12;
-    transform: translate(-5px, -5px);
+div#all {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 50px;
+    width: 100vw;
+    transition: .3s;
+}
+
+#all > p {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.page {
+    width: 300px;
+    min-width: 300px;
+    min-height: 200px;
+    border: 1px solid;
+    transition: .3s;
 }
