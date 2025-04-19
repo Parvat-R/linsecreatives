@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Chillax";
+    src: url("./Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf") format("truetype-variations");
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("./ClashDisplay_Complete/Fonts/TTF/ClashDisplay-Variable.ttf") format("truetype-variations");
+}
+
+@font-face {
+    font-family: "Boska";
+    src: url("./Boska_Complete/Fonts/TTF/Boska-Variable.ttf") format("truetype-variations");
+}
+
+@font-face {
+    font-family: "Boska Italic";
+    src: url("./Boska_Complete/Fonts/TTF/Boska-VariableItalic.ttf") format("truetype-variations");
+}
