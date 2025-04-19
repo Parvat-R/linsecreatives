@@ -1,29 +1,68 @@
 :root {
     --white: #fafafa;
     --black: #1a1a1a;
-    --teal: #1abc9c;
+    --unique: #ffe066;
+}
+
+::selection {
+    background: var(--black);
+    color: var(--unique);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* transition: .3s; */
+    cursor: none;
 }
 
 body {
     background-color: var(--white);
     color: var(--black);
+    overflow: hidden;
+}
+
+#root {
+    background-color: var(--white);
+    color: var(--black);
 
     font-family: "Chillax", sans-serif;
     font-size: 16px;
+
+    max-height: 100vh;
+    overflow: hidden scroll;
 }
+
+#root::-webkit-scrollbar {
+    width: 15px;
+    /* opacity: .5; */
+}
+
+#root::-webkit-scrollbar-track {
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+#root::-webkit-scrollbar-thumb {
+    background-color: #1a1a1a50;
+    border-radius: 10px;
+    border: 4px solid var(--white); /* For some spacing effect */
+    transition: .3s;
+}
+
+#root::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Clash Display", sans-serif;
 }
 
 a {
-    color: var(--teal);
+    color: #1a1a1a;
     text-decoration: none;
 }
 
@@ -31,48 +70,17 @@ a:hover {
     text-decoration: underline;
 }
 
-img {
-    max-width: 100%;
-}
-
-li {
-    list-style: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-button:disabled {
-    cursor: not-allowed;
-}
-
-input, textarea {
-    font-family: "Chillax", sans-serif;
-    font-size: 16px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 #nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
-    background-color: var(--white);
-
+    /* background-color: var(--white); */
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 1rem 0;
-    border-bottom: 1px solid var(--black);
-
+    border-bottom: 1px solid #1a1a1a38;
     z-index: 10;
 }
 
@@ -82,7 +90,7 @@ input::-webkit-inner-spin-button {
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    padding: 0 1rem;
+    padding: 0 3rem;
 }
 
 #nav h1 {
@@ -129,12 +137,15 @@ input::-webkit-inner-spin-button {
 #nav .links {
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
 #nav .links a {
     font-size: 1rem;
     font-weight: 400;
+    border: 1px solid #00000000;
+    padding: .2rem 1rem;
+    border-radius: .7rem;
+    text-decoration: none;
 }
 
 #hero {
@@ -142,15 +153,42 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     height: 100vh;
-
-    background-color: var(--white);
+    background-color: #fafafa;
     color: var(--black);
     text-align: center;
-
     padding: 1rem;
     position: relative;
-
     overflow: hidden;
+}
+
+#hero p {
+    font-size: 100px;
+    font-family: 'Clash Display';
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1a1a1ad9;
+}
+
+.mover {
+    border: 1px solid #000;
+    border-radius: .7rem;
+    position: absolute;
+    z-index: 11;
+    user-select: none;
+    pointer-events: none;
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #1a1a1a;
+    mix-blend-mode: difference;
+    /* opacity: .5; */
+    backdrop-filter: invert(1);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 12;
+    transform: translate(-5px, -5px);
 }
