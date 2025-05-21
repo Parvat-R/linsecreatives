@@ -1,7 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const pages = document.querySelectorAll(".page");
+gsap.registerPlugin(ScrollTrigger);
 
-    document.addEventListener("scroll", (e) => {
-        console.log(e);
-    });
+gsap.timeline({
+  scrollTrigger: {
+    scrub: 1,
+    trigger: "#feature-video",
+    start: "top 90%",
+    end: "bottom 30%",
+  },
 });

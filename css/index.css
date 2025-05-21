@@ -37,6 +37,7 @@ body {
 }
 
 #root::-webkit-scrollbar {
+    display: none;
     width: 15px;
     /* opacity: .5; */
 }
@@ -49,7 +50,8 @@ body {
 #root::-webkit-scrollbar-thumb {
     background-color: #1a1a1a50;
     border-radius: 10px;
-    border: 4px solid var(--white); /* For some spacing effect */
+    border: 4px solid var(--white);
+    /* For some spacing effect */
     transition: .3s;
 }
 
@@ -59,7 +61,12 @@ body {
 
 
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Clash Display", sans-serif;
 }
 
@@ -179,7 +186,7 @@ a:hover {
 .pages {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -197,9 +204,13 @@ div#all {
     transition: .3s;
 }
 
-#all > p {
+#all>p {
     font-size: 20px;
     padding: 20px;
+}
+
+.pages {
+    height: 100vh;
 }
 
 .page {
@@ -212,4 +223,71 @@ div#all {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#video {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
+    background: #101010;
+    border-radius: 3rem;
+    padding: 3rem;
+    color: #fafafa;
+    height: 300vh;
+}
+
+#video .title {
+}
+
+/* Add this to your CSS file */
+#video {
+    width: 80%;
+    transition: width 0.3s ease-out;
+    /* Initial state */
+    position: relative;
+}
+
+div#nav.blacked {
+    transition: .5s;
+    color: #f1f1f1;
+    background: #1a1a1a;
+    mix-blend-mode: unset;
+
+    & a {
+        color: #f1f1f161;
+        transition: color .3s;
+
+        &:hover {
+            color: #f1f1f1;
+        }
+    }
+
+}
+.person-ref img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 11px;
+}
+
+#soundControl {
+    position: relative;
+    outline: none;
+    border: 1px solid #0000;
+    background: #fff0;
+    opacity: .6;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: .1em;
+    transition: .3s;
+}
+
+#soundControl:is(:hover, :focus) {
+    outline: none;
+    opacity: 1;
 }

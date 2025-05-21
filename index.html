@@ -9,15 +9,23 @@
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/LinseCursor.js" defer></script>
+    <script src="./js/soundControl.js" defer></script>
 </head>
 
 <body>
-    <div class="mover"></div>
     <div class="dot"></div>
+    <div class="mover"></div>
     <div id="root">
         <div id="nav">
             <div class="nav-container">
                 <h1>Linse Creatives</h1>
+                <div id="soundControl" aria-label="Toggle sound" class="magnet-box">
+                    <svg id="soundIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path id="waveOne" d="M15 8a5 5 0 0 1 0 8"></path>
+                        <path id="waveTwo" d="M18 5a9 9 0 0 1 0 14"></path>
+                    </svg>
+                </div>
                 <div class="menu">
                     <div class="menu-toggler"></div>
                     <div class="links">
@@ -32,21 +40,47 @@
 
         <div id="hero">
             <div class="title">
-                <h1>the only digital marketing agency you will ever need</h1>
+                <h1>Carving Your Digital Presence in the Attention Economy</h1>
             </div>
         </div>
 
-        <div id="all">
-            <p>Select what you want. Scroll for all.</p>
-            <div class="pages">
-                <div class="page magnet-box" id="video">View Box</div>
-                <div class="page magnet-box" id="website">Web Box</div>
-                <div class="page magnet-box" id="marketing">Marketing Box</div>
+        <div id="video" data-scroll-container class="black-section">
+
+                <div id="feature-video">
+                    <video src="./assets/videos/tillIFoundHer-SivaEdit.mp4" muted autoplay="true" loop="true"></video>
+                </div>
+
+            <div class="title">
+                <h2>Video Editing</h2>
+                <div class="description">At Linse Creatives, we turn raw footage into compelling visual stories. Whether it’s long-form content for YouTube or short, snappy reels for Instagram, our team ensures every frame aligns with your brand's voice and purpose. From cuts and transitions to sound design and motion graphics, we handle the entire post-production process to help you engage, inform, and convert your audience.</div>
             </div>
+
+            <div class="works">
+                <div class="work">
+                    <a class="work-ref" href="#">
+                        <video src="./assets/videos/tillIFoundHer-SivaEdit.mp4" muted autoplay="true" loop="true"></video>
+                        <h3>Till I Found Her</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team">
+                <div class="person">
+                    <a class="person-ref" href="">
+                        <img src="/assets/icons/linsecreatives-logo-512.png">
+                        <div class="name">John Doe</div>
+                        <div class="position">CEO</div>
+                    </a>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
-    <script src="./js/index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/index.js" type="module" defer></script>
 </body>
 
 </html>
