@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Sticky SVG Grid Animation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 100vh; /* Default for other sections */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-before {
+            background-color: #222;
+        }
+
+        .section-after {
+            background-color: #333;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <section class="section-before">
+        <h1>Section Before Grid</h1>
+        <p>Scroll down.</p>
+    </section>
+
+    <section class="section-after">
+        <h1>Section After Grid</h1>
+        <p>All animations complete.</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

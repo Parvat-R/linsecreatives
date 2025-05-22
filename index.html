@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<div class="dot"></div>
+<div class="mover"></div>
 <html lang="en">
 
 <head>
@@ -9,23 +11,14 @@
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/LinseCursor.js" defer></script>
-    <script src="./js/soundControl.js" defer></script>
 </head>
 
 <body>
-    <div class="dot"></div>
-    <div class="mover"></div>
+
     <div id="root">
         <div id="nav">
             <div class="nav-container">
                 <h1>Linse Creatives</h1>
-                <div id="soundControl" aria-label="Toggle sound" class="magnet-box">
-                    <svg id="soundIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <path id="waveOne" d="M15 8a5 5 0 0 1 0 8"></path>
-                        <path id="waveTwo" d="M18 5a9 9 0 0 1 0 14"></path>
-                    </svg>
-                </div>
                 <div class="menu">
                     <div class="menu-toggler"></div>
                     <div class="links">
@@ -33,6 +26,14 @@
                         <a class="magnet-box" href="#">About</a>
                         <a class="magnet-box" href="#">Services</a>
                         <a class="magnet-box" href="#">Contact</a>
+                        <div id="soundControl" aria-label="Toggle sound">
+                            <svg id="soundIcon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                <path id="waveOne" d="M15 8a5 5 0 0 1 0 8"></path>
+                                <path id="waveTwo" d="M18 5a9 9 0 0 1 0 14"></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,43 +45,60 @@
             </div>
         </div>
 
-        <div id="video" data-scroll-container class="black-section">
 
-                <div id="feature-video">
-                    <video src="./assets/videos/tillIFoundHer-SivaEdit.mp4" muted autoplay="true" loop="true"></video>
+        <div id="video-feature">
+
+            <div class="show-reel">
+                <video class="show-reel-video" src="/assets/videos/Dark Reality of Indian Education System.mp4"
+                    autoplay="true" loop="true"></video>
+            </div>            
+            <div class="desc">
+                <div class="content">
+                    We are committed to crafting brand perfect visuals that are unique and engaging, that tell a story
+                    that resonates with your audience.
                 </div>
-
-            <div class="title">
-                <h2>Video Editing</h2>
-                <div class="description">At Linse Creatives, we turn raw footage into compelling visual stories. Whether it’s long-form content for YouTube or short, snappy reels for Instagram, our team ensures every frame aligns with your brand's voice and purpose. From cuts and transitions to sound design and motion graphics, we handle the entire post-production process to help you engage, inform, and convert your audience.</div>
+                <div class="right">
+                    <div id="video-second-parent"></div>
+                    <div class="cta-button">
+                        Get You Video Now
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="works">
-                <div class="work">
-                    <a class="work-ref" href="#">
-                        <video src="./assets/videos/tillIFoundHer-SivaEdit.mp4" muted autoplay="true" loop="true"></video>
-                        <h3>Till I Found Her</h3>
-                    </a>
+
+        <div id="purpose" class="grid-section">
+
+            <svg id="grid-svg" preserveAspectRatio="none"></svg>
+            <div class="grid-content-wrapper">
+                <!-- Content will scroll "over" the sticky SVG grid lines -->
+                <div class="content-box content-box-1">
+                    <h2>our purpose</h2>
+                    <p>This content scrolls over the sticky grid lines. The grid provides a constant background while
+                        this content animates in.</p>
                 </div>
-            </div>
-
-            <div class="team">
-                <div class="person">
-                    <a class="person-ref" href="">
-                        <img src="/assets/icons/linsecreatives-logo-512.png">
-                        <div class="name">John Doe</div>
-                        <div class="position">CEO</div>
-                    </a>
+                <div class="content-box content-box-2">
+                    <h2>our perseption</h2>
+                    <p>Each content box animates as it enters the viewport, with the grid lines remaining fixed due to
+                        the sticky SVG.</p>
                 </div>
-
             </div>
 
         </div>
 
+
+        <div id="ourservices">
+
+        </div>
+
+
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="./js/index.js" type="module" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script>
+    <script src="./js/soundControl.js" defer></script>
+    <script src="./js/index.js" defer></script>
+
 </body>
 
 </html>
