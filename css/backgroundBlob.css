@@ -1,0 +1,16 @@
+#morphing-blob {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(50px);
+    user-select: none;
+}
+
+.blob-path {
+    fill: rgb(73, 191, 255);
+    filter: blur(2px);
+    transform-origin: center;
+}

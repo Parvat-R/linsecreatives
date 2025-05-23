@@ -8,7 +8,7 @@ if (!document.querySelector(".dot")) {
 const dotAndMagnetStyle = `
 .mover {
     border: 1px solid #ffffff;
-    border-radius: .7rem;
+    border-radius: 25px;
     position: absolute;
     z-index: 11;
     user-select: none;
