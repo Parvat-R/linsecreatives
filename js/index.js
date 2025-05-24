@@ -70,11 +70,11 @@ const initialBorderRadius = 30;
 
 
 // --- First Scroll Animation (Expand to fullscreen) ---
-const firstAnimation = gsap.fromTo('.show-reel-video', {scale: .8, y: '-10vh'}, {
+const firstAnimation = gsap.fromTo('.show-reel-video', { scale: .8, y: '-10vh' }, {
     scrollTrigger: {
         trigger: '#video-feature',
         scroller: '#root',
-        scrub: 0.1,
+        scrub: 1,
         start: 'top 90%',
         end: 'top 10%',
         invalidateOnRefresh: true,
@@ -106,7 +106,7 @@ const secondAnimation = gsap.to('.show-reel-video', {
     scrollTrigger: {
         trigger: '#video-feature',
         scroller: '#root',
-        scrub: 0.1,
+        scrub: 1,
         start: 'top -150%',
         end: 'top -250%',
         invalidateOnRefresh: true,
@@ -126,8 +126,24 @@ const secondAnimation = gsap.to('.show-reel-video', {
         } else {
             showReel.volume = 0;
         }
-    }
+    },
 });
+
+
+
+gsap.to('.content', {
+    scrollTrigger: {
+        trigger: '#video-feature',
+        scroller: '#root',
+        scrub: 0.1,
+        start: 'top -230%',
+        end: 'top -290%',
+        invalidateOnRefresh: true,
+    },
+    width: '100%',
+    opacity: 1
+})
+
 
 // Optional: Add refresh handler to ensure proper state on window resize
 ScrollTrigger.addEventListener("refresh", () => {

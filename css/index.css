@@ -265,7 +265,6 @@ div#all {
     flex-direction: column;
     padding: 10px;
     width: fit-content;
-    transition: 0.5s;
 }
 
 
@@ -289,6 +288,13 @@ div#all {
     aspect-ratio: 16 / 9;
     border-radius: 30px;
     will-change: width;
+}
+
+.content  {
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .4s;
 }
 
 .content h3 {
