@@ -3,8 +3,15 @@ import { gsap, ScrollTrigger, SplitText, ScrollSmoother } from "../assets/gsap/g
 const nav = document.getElementById('nav');
 const root = document.getElementById('root');
 const showReel = document.querySelector("video.show-reel-video");
-const showReelContainer = document.querySelector('.show-reel-video');
-showReel.volume = 0;
+showReel.volume = 0.1;
+
+
+function restartVideo() {
+    showReel.pause();
+    showReel.currentTime = 0;
+    showReel.play();
+}
+
 
 /* THE ESSENTIAL FUNCTION */
 function parametricBlend(t) {
@@ -87,6 +94,12 @@ const firstAnimation = gsap.fromTo('.show-reel-video', { scale: .8, y: '-10vh' }
 
     onUpdate: function () {
         const progress = this.totalProgress();
+        if (progress < 0.1) {
+            showReel.pause();
+            showReel.currentTime = 0;
+        } else if (showReel.played) {
+            showReel.play();
+        }
         const px = Math.floor(progress * 100);
         const borderRadius = initialBorderRadius - Math.floor(progress * initialBorderRadius);
 

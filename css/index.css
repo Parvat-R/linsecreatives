@@ -1,5 +1,5 @@
 :root {
-    --white: #f5fbff;
+    --white: #ffffff;
     --black: #0A0A0A;
     --bittersweet: #D52920;
     --slateblue: #77878B;
@@ -283,11 +283,11 @@ div#all {
 .show-reel-video {
     position: sticky;
     top: 0;
-
     width: 100vw;
     aspect-ratio: 16 / 9;
     border-radius: 30px;
     will-change: width;
+    z-index: 2;
 }
 
 .content  {
@@ -306,7 +306,8 @@ div#all {
 }
 
 .cta-button {
-    position: relative;
+    position: sticky;
+    bottom: 10px;
     font-size: 1.25em;
     padding: .25em 1.5em;
     color: var(--bittersweet);
@@ -314,6 +315,7 @@ div#all {
     border-radius: 25px;
     font-family: 'Clash Display';
     transition: .3s;
+    z-index: 1;
 }
 
 .cta-button:hover {
